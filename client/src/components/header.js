@@ -1,14 +1,16 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/prop-types */
 import React from 'react';
-import { colors, widths } from '../styles';
 import styled from '@emotion/styled';
 import { Link } from '@reach/router';
+import { colors, widths } from '../styles';
 import logo from '../assets/space_cat_logo.png';
 
 /**
  * Header renders the top navigation
  * for this particular tutorial level, it only holds the home button
  */
-const Header = ({ children }) => {
+function Header({ children }) {
   return (
     <HeaderBar>
       <Container>
@@ -29,7 +31,7 @@ const Header = ({ children }) => {
       </Container>
     </HeaderBar>
   );
-};
+}
 
 export default Header;
 
@@ -39,7 +41,7 @@ const HeaderBar = styled.div({
   flexDirection: 'row',
   alignItems: 'center',
   justifyContent: 'center',
-  borderBottom: `solid 1px ${colors.pink.light}`,
+  borderBottom: 'solid 1px #ffa3e0',
   boxShadow: '0px 1px 5px 0px rgba(0,0,0,0.15)',
   padding: '5px 30px',
   minHeight: 80,
@@ -47,7 +49,7 @@ const HeaderBar = styled.div({
 });
 
 const Container = styled.div({
-  width: `${widths.regularPageWidth}px`,
+  width: widths?.regularPageWidth,
 });
 
 const HomeLink = styled(Link)({
